@@ -159,19 +159,19 @@ while running:
         if event.type == pygame.QUIT:
             terminate()
 
-    keys = pygame.key.get_pressed()
-    if keys[pygame.K_LEFT]:
-        if player.rect.x >= 0:
-            player.rect.x -= tile_width
-    elif keys[pygame.K_RIGHT]:
-        if player.rect.x <= width - tile_width:
-            player.rect.x += tile_width
-    elif keys[pygame.K_UP]:
-        if player.rect.y >= 0:
-            player.rect.y -= tile_width
-    elif keys[pygame.K_DOWN]:
-        if player.rect.y <= height - tile_width:
-            player.rect.y += tile_width
+        keys = pygame.key.get_pressed()
+        if keys[pygame.K_LEFT]:
+            if player.rect.x >= 0:
+                player.rect.x -= tile_width
+        elif keys[pygame.K_RIGHT]:
+            if player.rect.x <= width - tile_width:
+                player.rect.x += tile_width
+        elif keys[pygame.K_UP]:
+            if player.rect.y >= 0:
+                player.rect.y -= tile_width
+        elif keys[pygame.K_DOWN]:
+            if player.rect.y <= height - tile_width:
+                player.rect.y += tile_width
 
     tiles_empty_group.update()
     tiles_empty_group.draw(screen)
